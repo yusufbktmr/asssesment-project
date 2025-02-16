@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     use HasFactory;
+
+    protected $hidden = ['created_at', 'updated_at'];
     protected $fillable = ['customer_id', 'total'];
 
     public function customer()
@@ -18,5 +20,10 @@ class Order extends Model
     public function items()
     {
         return $this->hasMany(OrderItem::class);
+    }
+
+    public function discounts()
+    {
+        return $this->hasMany(OrderDiscount::class);
     }
 }
