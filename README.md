@@ -107,3 +107,4 @@ Laravel’in Handler yapısı kullanılmıştır.
 **Projede MakeFile mevcuttur. Proje çekildikten sonra**
 `make up`
 **komutunu çalıştırmak yeterlidir.**
+.env File 'make up' komutu ile oluşmaktadır. Postman collection'ı proje içerisinden RestApi Collection.postman_collection.json içerisinde bulabilirsiniz.
