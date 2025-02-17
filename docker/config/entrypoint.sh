@@ -3,9 +3,9 @@
 # Hata durumunda script'in çalışmasını durdur
 set -e
 sleep 5
+php artisan config:cache
 php artisan config:clear
 php artisan cache:clear
-php artisan config:cache
 composer install
 composer dumpautoload
 sleep 5

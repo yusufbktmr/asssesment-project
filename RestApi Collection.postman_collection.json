@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "b68fe6bc-bb9a-4538-b2c1-a03d508f3fef",
+		"name": "RestApi Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3363556"
+	},
+	"item": [
+		{
+			"name": "Order Create",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerId\" : 3,\n    \"stock\": [\n        {\n            \"productId\": 102,\n            \"quantity\": 9\n        },\n        {\n            \"productId\": 100,\n            \"quantity\": 9\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost/api/orders",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order Delete",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost/api/orders/17",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"orders",
+						"17"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Order List",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/api/orders",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Discount Get",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/api/orders/{{order_id}}/discount",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"orders",
+						"{{order_id}}",
+						"discount"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "order_id",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
